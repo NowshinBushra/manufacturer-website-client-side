@@ -1,0 +1,54 @@
+[
+    {"_id": 1, 
+     "img": "https://i.ibb.co/8cZgqVz/1.jpg", 
+     "name": "Breaks", 
+     "price": "394.12", 
+     "description": "Shimano XTR Enduro BR-M9120 Disc Brake Set w/ N03A Resin Pads J-Kit",
+     "min_order": "10",
+     "quantity": "130"
+    },
+
+    {"_id": 2, 
+        "img": "https://i.ibb.co/M8fM9QL/11.jpg", 
+        "name": "Wheels", 
+        "price": "755.46", 
+        "description": "Zipp 303 S Carbon Tubeless Disc Centre Lock Wheelset",
+        "min_order": "10",
+        "quantity": "80"
+    },
+    
+    {"_id": 3, 
+        "img": "https://i.ibb.co/3hGSycX/9.jpg", 
+        "name": "Drivetrains", 
+        "price": "142.02", 
+        "description": "Shimano GRX FC-RX810-1 Hollowtech II Crankset",
+        "min_order": "10",
+        "quantity": "105"
+    },
+    
+    
+    {"_id": 4, 
+        "img": "https://i.ibb.co/bPgCnCn/4.jpg", 
+        "name": "Tyres", 
+        "price": "31.92", 
+        "description": "Continental Grand Prix 5000 28`` Folding Tyre",
+        "min_order": "10",
+        "quantity": "78"
+    },
+    {"_id": 5, 
+        "img": "https://i.ibb.co/NtCrjTm/5.jpg", 
+        "name": "Power Meter", 
+        "price": "461.34", 
+        "description": "Garmin Rally RK100 Power Meter Pedals",
+        "min_order": "10",
+        "quantity": "96"
+    },
+    {"_id": 6, 
+        "img": "https://i.ibb.co/fN7k911/6.jpg", 
+        "name": "Frames", 
+        "price": "2856.30", 
+        "description": "Yeti Cycles SB115 Turq Carbon 29`` Frameset",
+        "min_order": "10",
+        "quantity": "134"
+    }
+]

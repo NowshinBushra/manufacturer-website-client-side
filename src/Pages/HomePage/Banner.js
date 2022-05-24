@@ -9,7 +9,7 @@ const Banner = () => {
                     <div class="max-w-md">
                         <h1 class="mb-5 text-4xl font-bold">We're Building for your Next Adventure</h1>
                         <p class="mb-5">There's nothing more enjoyable than creating the best. The fastest road and triathlon bikes parts, the wildest bikes for dirt and gravel-designed. Your next challenge awaits.</p>
-                        <button class="btn btn-primary text-white font-bold">Get Started</button>
+                        <button class="btn btn-accent text-white font-bold">Get Started</button>
                     </div>
                 </div>
             </div>
