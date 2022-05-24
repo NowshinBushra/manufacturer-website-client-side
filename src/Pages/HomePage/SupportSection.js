@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const SupportSection = () => {
     return (
-        <div>
+        <div className='mb-12'>
             
-            <h3 className='uppercase text-center my-12'><span className='bg-primary lg:text-2xl text-white px-3.5'>Our Mission is to Enable Adventure</span></h3>
+            <h3 className='uppercase text-center my-12'><span className='text-2xl font-bold text-primary'>Our Mission is to Enable Adventure</span></h3>
             <div className='grid justify-items-center grid-cols-1 lg:grid-cols-5 gap-4'>
                 <div>
                     <h4 className='font-bold text-accent'>EXPLORE</h4>
