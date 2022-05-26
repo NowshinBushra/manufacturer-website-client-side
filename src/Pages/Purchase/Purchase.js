@@ -1,10 +1,15 @@
 // import { error } from 'daisyui/src/colors/colorNames';
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 const Purchase = ({ }) => {
     const { _id } = useParams();
+
+    const [user, loading, error] = useAuthState(auth);
+
     const [product, setProduct] = useState({});
 
     useEffect(() => {
@@ -48,8 +53,8 @@ const Purchase = ({ }) => {
             <div>
                  <form onSubmit={handlePurchase} className='grid justify-items-center grid-cols-1 gap-3 mt-8'>
                         <h4 className='font-bold text-2xl uppercase'>Purchase Your Order</h4>
-                        <input type="text" name='name' placeholder="Your Name" className="input input-bordered w-full max-w-xs" />
-                        <input type="email" name='email' placeholder="Your Email" className="input input-bordered w-full max-w-xs" />
+                        <input type="text" name='name' disabled value={user?.displayName || ''} className="input input-bordered w-full max-w-xs" />
+                        <input type="email" name='email' disabled value={user?.email || ''} className="input input-bordered w-full max-w-xs" />
                         <input type="text" name='address' placeholder="Address" className="input input-bordered w-full max-w-xs" />
                         <input type="text" name='phone' placeholder="Phone" className="input input-bordered w-full max-w-xs" />
                         <input type="submit" value="Purchase" className="btn btn-primary w-full max-w-xs" />
