@@ -3,6 +3,7 @@ import './App.css';
 import About from './Pages/About/About';
 import Home from './Pages/HomePage/Home';
 import Login from './Pages/Login/Login';
+import Purchase from './Pages/Purchase/Purchase';
 import Footer from './Pages/Shared/Footer';
 import Navbar from './Pages/Shared/Navbar';
 
@@ -12,8 +13,10 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
-        <Route path='about' element={<About></About>}></Route>
-        <Route path='login' element={<Login></Login>}></Route>
+        <Route path='/purchase/:_id' element={<Purchase></Purchase>}></Route>
+        <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/about' element={<About></About>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
