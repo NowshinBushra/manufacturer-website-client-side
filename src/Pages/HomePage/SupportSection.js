@@ -42,7 +42,7 @@ const SupportSection = () => {
                     <p><small>Take 15% off accessories & conversion kits on your first order!</small></p>
                     <h5>Email Address</h5>
                     <input className='my-2 border-solid border-2 border-primary' type="text" /><br />
-                    <button class="btn btn-outline btn-wide btn-sm btn-primary">Subscribe</button>
+                    <button className="btn btn-outline btn-wide btn-sm btn-primary">Subscribe</button>
                     <p>By subscribing you agree to the terms of service and privacy policy</p>
                 </div>
                 

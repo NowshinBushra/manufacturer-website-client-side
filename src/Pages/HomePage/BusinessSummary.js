@@ -45,15 +45,15 @@ const BusinessSummary = () => {
 
 
             <div className=' flex justify-center'>
-                <div class="card w-4/5 bg-base-100 shadow-xl">
-                    <div class="card-body items-center grid lg:grid-cols-2 gap-20">
+                <div className="card w-4/5 bg-base-100 shadow-xl">
+                    <div className="card-body items-center grid lg:grid-cols-2 gap-20">
                         <div>
                             <p className='text-2xl font-bold'>Have any question about us or get a product request?</p>
                             <p className='text-accent'>Don't hesitate to contact us</p>
                         </div>
-                        <div class="card-actions">
-                            <button class="btn btn-sm text-accent">Request for Quote</button>
-                            <button class="btn btn-sm btn-accent">Contact us</button>
+                        <div className="card-actions">
+                            <button className="btn btn-sm text-accent">Request for Quote</button>
+                            <button className="btn btn-sm btn-accent">Contact us</button>
                         </div>
                     </div>
                 </div>
