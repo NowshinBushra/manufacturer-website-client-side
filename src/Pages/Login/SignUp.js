@@ -1,22 +1,22 @@
 import React from 'react';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
 
+const SignUp = () => {
 
-const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
 
     const [
-        signInWithEmailAndPassword,
+        createUserWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useSignInWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth);
 
-    let signInError;
+    let signUpError;
 
     if (loading || gLoading) {
         return <div className='h-screen flex justify-center items-center'>
@@ -27,7 +27,7 @@ const Login = () => {
     if (error || gError) {
        
             
-            signInError =  <p><small className='text-red-600'>Error: {error?.message || gError?.message}</small></p>
+        signUpError =  <p><small className='text-red-600'>Error: {error?.message || gError?.message}</small></p>
            
     }
 
@@ -37,16 +37,32 @@ const Login = () => {
 
     const onSubmit = data => {
         // console.log(data);
-        signInWithEmailAndPassword(data.email, data.password);
+        createUserWithEmailAndPassword(data.email, data.password);
     };
 
     return (
-
         <div className='flex justify-center items-center h-screen'>
             <div className="card w-96 bg-base-100 shadow-xl border-t-4 border-indigo-500v">
                 <div className="card-body">
-                    <h2 className="text-2xl font-bold text-center">Login</h2>
+                    <h2 className="text-2xl font-bold text-center">Sign Up</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
+
+                    <div class="form-control w-full max-w-xs">
+                            <label class="label">
+                                <span class="label-text">Your Name</span>
+                            </label>
+                            <input type="text" placeholder="Name" class="input input-bordered w-full max-w-xs"
+                                {...register("name", {
+                                    required: {
+                                        value: true,
+                                        message: 'Name is required'
+                                    }
+                                })} />
+                            <label class="label">
+                                {errors.name?.type === 'required' && <span class="label-text-alt text-red-700">{errors.name.message}</span>}
+
+                            </label>
+                        </div>
 
                         <div class="form-control w-full max-w-xs">
                             <label class="label">
@@ -91,17 +107,16 @@ const Login = () => {
                             </label>
                         </div>
 
-                          {signInError}      
-                        <input className='btn w-full max-w-xs' type="submit" value="Login" />
+                          {signUpError}      
+                        <input className='btn w-full max-w-xs' type="submit" value="Sign Up" />
                     </form>
-                    <p><small>Don't have an account?</small> <Link to='/signup' className='text-accent pe-auto text-decoration-none'>Create new account</Link> </p>
+                    <p><small>Already have an account?</small> <Link to='/login' className='text-accent pe-auto text-decoration-none'>Please Login</Link> </p>
                     <div className="divider">OR</div>
                     <button onClick={() => signInWithGoogle()} className="btn btn-outline">Continue With Google</button>
                 </div>
             </div>
         </div>
-
     );
 };
 
-export default Login;
+export default SignUp;
