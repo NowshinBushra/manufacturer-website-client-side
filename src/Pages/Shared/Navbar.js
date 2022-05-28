@@ -19,6 +19,7 @@ const Navbar = () => {
         <li><Link className='text-accent' to='/addReview'>Add Review</Link></li>
         <li><Link className='text-accent' to='/myProfile'>My Profile</Link></li>
         <li><Link className='text-accent' to='/myPortfolio'>My Portfolio</Link></li>
+        <li><Link className='text-accent' to='/blogs'>Blogs</Link></li>
         <li>{user ? <button onClick={logout} className="btn btn-outline btn-accent">Sign Out</button> : <Link className='text-accent' to='/login'>Login</Link>}</li>
     </>
 
