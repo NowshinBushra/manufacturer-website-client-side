@@ -21,6 +21,27 @@ const Purchase = () => {
     }, [_id]);
 
 
+    const orders = {
+        ptId: _id,
+        pName: product.name,
+        userEmail: user.email,
+        userName: user.displayName,
+    }
+
+    const url = `http://localhost:5000/orders`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(orders)
+        })
+        .then(res => res.json())
+        .then(result => {
+            console.log(result);
+        })
+
+
  //---------quantity decrement and increment---------- 
     const handleDecrement = () =>{
         
