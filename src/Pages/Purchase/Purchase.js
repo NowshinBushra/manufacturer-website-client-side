@@ -15,7 +15,7 @@ const Purchase = () => {
     const [newQuantity, setNewQuantity] = useState(10)
     
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${_id}`)
+        fetch(`https://aqueous-gorge-66871.herokuapp.com/product/${_id}`)
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [_id]);
@@ -28,7 +28,7 @@ const Purchase = () => {
         userName: user.displayName,
     }
 
-    const url = `http://localhost:5000/orders`;
+    const url = `https://aqueous-gorge-66871.herokuapp.com/orders`;
         fetch(url, {
             method: 'POST',
             headers: {

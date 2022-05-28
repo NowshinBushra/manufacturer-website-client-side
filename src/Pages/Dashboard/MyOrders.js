@@ -9,7 +9,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if(user){
-            fetch(`http://localhost:5000/orders?userEmail=${user.email}`)
+            fetch(`https://aqueous-gorge-66871.herokuapp.com/orders?userEmail=${user.email}`)
             .then(res => res.json())
             .then(data => setOrders(data));
         }
