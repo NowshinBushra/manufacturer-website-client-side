@@ -26,7 +26,7 @@ const MyPortfolio = () => {
             </div>
             <div><span className='font-bold'>My Websites: </span>
             <p className='ml-6'>
-                <li><a className='text-blue-600' href="https://www.w3schools.com/">Bicycle Manufacturer</a></li>
+                <li><a className='text-blue-600' href=" https://manufacturer-website-fbeb0.web.app/ ">Bicycle Manufacturer</a></li>
                 <li><a className='text-blue-600' href="https://vehico-mart-services.web.app/">Vehico Mart</a></li>
                 <li><a className='text-blue-600' href=" https://dermatological-services.web.app/">Dermatological Service</a></li>
             </p>
